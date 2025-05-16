@@ -1,60 +1,64 @@
-\chapter{Длинное название главы, в которой мы смотрим на~примеры того, как будут верстаться изображения и~списки}\label{ch:ch2}
+\chapter{Мост Эйнштейна-Розена}\label{ch:ch2}
 
-\section{Одиночное изображение}\label{sec:ch2/sec1}
+\section{Классическая формулировка}\label{subsec:ch2/sec1}
 
-\begin{figure}[ht]
-    \centerfloat{
-        \includegraphics[scale=0.27]{latex}
-    }
-    \caption{TeX.}\label{fig:latex}
-\end{figure}
+\section{Обобщенная формулировка}\label{subsec:ch2/sec2}
 
-Для выравнивания изображения по-центру используется команда \verb+\centerfloat+, которая является во
-многом улучшенной версией встроенной команды \verb+\centering+.
+%\section{Одиночное изображение}\label{sec:ch2/sec1}
+%
+%\begin{figure}[ht]
+%    \centerfloat{
+%        \includegraphics[scale=0.27]{latex}
+%    }
+%    \caption{TeX.}\label{fig:latex}
+%\end{figure}
 
-\section{Длинное название параграфа, в котором мы узнаём как сделать две картинки с~общим номером и названием}\label{sec:ch2/sect2}
-
-А это две картинки под общим номером и названием:
-\begin{figure}[ht]
-    \begin{minipage}[b][][b]{0.49\linewidth}\centering
-        \includegraphics[width=0.5\linewidth]{knuth1} \\ а)
-    \end{minipage}
-    \hfill
-    \begin{minipage}[b][][b]{0.49\linewidth}\centering
-        \includegraphics[width=0.5\linewidth]{knuth2} \\ б)
-    \end{minipage}
-    \caption{Очень длинная подпись к изображению,
-        на котором представлены две фотографии Дональда Кнута}
-    \label{fig:knuth}
-\end{figure}
-
-Те~же~две картинки под~общим номером и~названием,
-но с автоматизированной нумерацией подрисунков:
-\begin{figure}[ht]
-    \centerfloat{
-        \hfill
-        \subcaptionbox[List-of-Figures entry]{Первый подрисунок\label{fig:knuth_2-1}}{%
-            \includegraphics[width=0.25\linewidth]{knuth1}}
-        \hfill
-        \subcaptionbox{\label{fig:knuth_2-2}}{%
-            \includegraphics[width=0.25\linewidth]{knuth2}}
-        \hfill
-        \subcaptionbox{Третий подрисунок, подпись к которому
-            не~помещается на~одной строке}{%
-            \includegraphics[width=0.3\linewidth]{example-image-c}}
-        \hfill
-    }
-    \legend{Подрисуночный текст, описывающий обозначения, например. Согласно
-        ГОСТ 2.105, пункт 4.3.1, располагается перед наименованием рисунка.}
-    \caption[Этот текст попадает в названия рисунков в списке рисунков]{Очень
-        длинная подпись к второму изображению, на~котором представлены две
-        фотографии Дональда Кнута}\label{fig:knuth_2}
-\end{figure}
-
-На рисунке~\cref{fig:knuth_2-1} показан Дональд Кнут без головного убора.
-На рисунке~\cref{fig:knuth_2}\subcaptionref*{fig:knuth_2-2}
-показан Дональд Кнут в головном уборе.
-
+%Для выравнивания изображения по-центру используется команда \verb+\centerfloat+, которая является во
+%многом улучшенной версией встроенной команды \verb+\centering+.
+%
+%\section{Длинное название параграфа, в котором мы узнаём как сделать две картинки с~общим номером и названием}\label{sec:ch2/sect2}
+%
+%А это две картинки под общим номером и названием:
+%\begin{figure}[ht]
+%    \begin{minipage}[b][][b]{0.49\linewidth}\centering
+%        \includegraphics[width=0.5\linewidth]{knuth1} \\ а)
+%    \end{minipage}
+%    \hfill
+%    \begin{minipage}[b][][b]{0.49\linewidth}\centering
+%        \includegraphics[width=0.5\linewidth]{knuth2} \\ б)
+%    \end{minipage}
+%    \caption{Очень длинная подпись к изображению,
+%        на котором представлены две фотографии Дональда Кнута}
+%    \label{fig:knuth}
+%\end{figure}
+%
+%Те~же~две картинки под~общим номером и~названием,
+%но с автоматизированной нумерацией подрисунков:
+%\begin{figure}[ht]
+%    \centerfloat{
+%        \hfill
+%        \subcaptionbox[List-of-Figures entry]{Первый подрисунок\label{fig:knuth_2-1}}{%
+%            \includegraphics[width=0.25\linewidth]{knuth1}}
+%        \hfill
+%        \subcaptionbox{\label{fig:knuth_2-2}}{%
+%            \includegraphics[width=0.25\linewidth]{knuth2}}
+%        \hfill
+%        \subcaptionbox{Третий подрисунок, подпись к которому
+%            не~помещается на~одной строке}{%
+%            \includegraphics[width=0.3\linewidth]{example-image-c}}
+%        \hfill
+%    }
+%    \legend{Подрисуночный текст, описывающий обозначения, например. Согласно
+%        ГОСТ 2.105, пункт 4.3.1, располагается перед наименованием рисунка.}
+%    \caption[Этот текст попадает в названия рисунков в списке рисунков]{Очень
+%        длинная подпись к второму изображению, на~котором представлены две
+%        фотографии Дональда Кнута}\label{fig:knuth_2}
+%\end{figure}
+%
+%На рисунке~\cref{fig:knuth_2-1} показан Дональд Кнут без головного убора.
+%На рисунке~\cref{fig:knuth_2}\subcaptionref*{fig:knuth_2-2}
+%показан Дональд Кнут в головном уборе.
+%
 \section{Векторная графика}\label{sec:ch2/vector}
 
 Возможно вставлять векторные картинки, рассчитываемые \LaTeX\ <<на~лету>>
