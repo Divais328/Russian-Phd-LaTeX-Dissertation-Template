@@ -3,6 +3,8 @@
 \usepackage{csquotes} % biblatex рекомендует его подключать. Пакет для оформления сложных блоков цитирования.
 %%% Загрузка пакета с основными настройками %%%
 
+%\DeclareUnicodeCharacter{02B9}{\'}
+
 \makeatletter
 \ifnumequal{\value{draft}}{0}{% Чистовик
 
@@ -20,6 +22,7 @@ defernumbers=true,
 sortcites=true,
 doi=true,
 isbn=false,
+url=false
 ]{biblatex}
 
 % When you just want to put around braces in your cite, use:
@@ -41,6 +44,7 @@ defernumbers=true,% нумерация проставляется после д�
 sortcites=true,% сортировать номера затекстовых ссылок при цитировании (если в квадратных скобках несколько ссылок, то отображаться будут отсортированно, а не абы как)
 doi=false,% Показывать или нет ссылки на DOI
 isbn=false,% Показывать или нет ISBN, ISSN, ISRN
+url=false
 ]{biblatex}%[2016/09/17]
 }
 
