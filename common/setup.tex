@@ -16,7 +16,7 @@
 \makeatletter
 \@ifundefined{c@showmarkup}{
   \newcounter{showmarkup}
-  \setcounter{showmarkup}{1}  % 0 --- скрыть пометки
+  \setcounter{showmarkup}{0}  % 0 --- скрыть пометки
                               % 1 --- показывать пометки
 }{}
 \makeatother
@@ -25,7 +25,7 @@
 \makeatletter
 \@ifundefined{c@usealtfont}{
   \newcounter{usealtfont}
-  \setcounter{usealtfont}{0}    % 0 --- шрифты на базе Computer Modern
+  \setcounter{usealtfont}{1}    % 0 --- шрифты на базе Computer Modern
                                 % 1 --- использовать пакет pscyr, при его
                                 %       наличии
                                 % 2 --- использовать пакет XCharter, при наличии
